@@ -12,13 +12,13 @@
 <script setup>
 import { ref } from "vue";
 import { TvModal } from "@todovue/tv-modal";
+import "@todovue/tv-modal/style.css";
 
 const modal = ref();
 const modalConfig = ref({
   title: "Error occurred",
   description: "Something went wrong. Please try again later.",
   confirmButtonText: "OK",
-  cancelButtonText: "Cancel",
   icon: "error",
 });
 </script>

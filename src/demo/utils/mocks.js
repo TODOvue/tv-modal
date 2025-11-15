@@ -43,7 +43,6 @@ export const demos = [
         title: "Error occurred",
         description: "Something went wrong. Please try again later.",
         confirmButtonText: "OK",
-        cancelButtonText: "Cancel",
         icon: "error",
       }
     },

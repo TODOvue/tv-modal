@@ -5,8 +5,15 @@
 A flexible, customizable Vue 3 modal component with multiple variants (success, error, warning, info), animations, theme support, and accessibility features. Works seamlessly in Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-modal.svg)](https://www.npmjs.com/package/@todovue/tv-modal)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5c6b372a-cb46-411f-918f-7835f77c750f/deploy-status)](https://app.netlify.com/projects/tv-modal/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-modal.svg)](https://www.npmjs.com/package/@todovue/tv-modal)
+[![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-modal.svg)](https://www.npmjs.com/package/@todovue/tv-modal)
 ![License](https://img.shields.io/github/license/TODOvue/tv-modal)
+![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-modal)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@todovue/tv-modal)
+![Node Version](https://img.shields.io/node/v/@todovue/tv-modal)
+![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-modal)
+![Stars](https://img.shields.io/github/stars/TODOvue/tv-modal?style=social)
 
 > Demo: https://tv-modal.netlify.app/
 
@@ -59,12 +66,40 @@ Using pnpm:
 pnpm add @todovue/tv-modal
 ```
 
+### Importing Styles
+**Important:** Starting from version 1.0.0+, TvModal no longer injects CSS automatically. You must explicitly import the stylesheet in your application.
+
+#### For Vue/Vite SPA:
+```ts
+// main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import '@todovue/tv-modal/style.css'
+import { TvModal } from '@todovue/tv-modal'
+
+const app = createApp(App)
+app.component('TvModal', TvModal)
+app.mount('#app')
+```
+
+#### For Nuxt 3/4:
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  css: ['@todovue/tv-modal/style.css'],
+})
+```
+
+Then register the component in a plugin as shown in the [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage) section.
+
 ---
 ## Quick Start (SPA)
 Global registration (main.js / main.ts):
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
+import '@todovue/tv-modal/style.css'
 import TvModal from '@todovue/tv-modal'
 
 createApp(App)
@@ -111,10 +146,19 @@ const handleCanceled = () => {
   />
 </template>
 ```
+**Note:** Don't forget to import the CSS in your main entry file as shown above.
 
 ---
 ## Nuxt 3 / SSR Usage
-Create a plugin file: `plugins/tv-modal.client.ts`:
+First, add the CSS to your `nuxt.config.ts`:
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  css: ['@todovue/tv-modal/style.css'],
+})
+```
+
+Then create a plugin file: `plugins/tv-modal.client.ts`:
 ```ts
 import { defineNuxtPlugin } from '#app'
 import TvModal from '@todovue/tv-modal'

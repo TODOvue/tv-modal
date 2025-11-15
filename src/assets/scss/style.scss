@@ -2,6 +2,37 @@
 @use "mixins";
 @use "global";
 @use "sass:color";
+@import '@todovue/tv-button/style.css';
+
+.tv-modal-container {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .tv-modal {
+    background-color: variables.$dark-card-bg;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    &-title {
+      color: variables.$dark-text;
+    }
+
+    &-separator {
+      border-top-color: rgba(variables.$dark-text, 0.15);
+    }
+
+    &-description {
+      color: color.adjust(variables.$dark-text, $lightness: -20%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
 
 .light-mode {
   .tv-modal-container {
@@ -29,38 +60,6 @@
 
         &:hover {
           background: rgba(variables.$light-text, 0.4);
-        }
-      }
-    }
-  }
-}
-
-.dark-mode {
-  .tv-modal-container {
-    background-color: rgba(0, 0, 0, 0.7);
-
-    .tv-modal {
-      background-color: variables.$dark-card-bg;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(255, 255, 255, 0.05);
-
-      &-title {
-        color: variables.$dark-text;
-      }
-
-      &-separator {
-        border-top-color: rgba(variables.$dark-text, 0.15);
-      }
-
-      &-description {
-        color: color.adjust(variables.$dark-text, $lightness: -20%);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-
-        &:hover {
-          background: rgba(255, 255, 255, 0.3);
         }
       }
     }
