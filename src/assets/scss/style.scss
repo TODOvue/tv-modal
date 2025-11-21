@@ -2,7 +2,6 @@
 @use "mixins";
 @use "global";
 @use "sass:color";
-@import '@todovue/tv-button/style.css';
 
 .tv-modal-container {
   background-color: rgba(0, 0, 0, 0.7);

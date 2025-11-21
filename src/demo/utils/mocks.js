@@ -7,6 +7,7 @@ export const demos = [
   {
     id: 1,
     title: "TvModal Default",
+    description: "A simple confirmation modal with warning icon.",
     propsData: {
       buttonText: "Open modal",
       configModal: {
@@ -23,6 +24,7 @@ export const demos = [
   {
     id: 2,
     title: "TvModal Success",
+    description: "Modal shows a success message with success icon.",
     propsData: {
       buttonText: "Show Success",
       configModal: {
@@ -37,6 +39,7 @@ export const demos = [
   {
     id: 3,
     title: "TvModal Error",
+    description: "A simple confirmation modal with error icon.",
     propsData: {
       buttonText: "Show Error",
       configModal: {
@@ -51,6 +54,7 @@ export const demos = [
   {
     id: 4,
     title: "TvModal Info",
+    description: "Modal shows an informational message with info icon.",
     propsData: {
       buttonText: "Show Info",
       configModal: {
