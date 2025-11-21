@@ -12,6 +12,7 @@
 import { ref } from "vue";
 import { TvModal } from "@todovue/tv-modal";
 import "@todovue/tv-modal/style.css";
+import '@todovue/tv-button/style.css';
 
 const modal = ref();
 const modalConfig = ref({

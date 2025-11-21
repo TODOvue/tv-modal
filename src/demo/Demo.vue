@@ -6,17 +6,13 @@ const TvModalDemo = defineAsyncComponent(/* webpackChunkName: "TvModalDemo" */()
 </script>
 
 <template>
-  <tv-demo
+  <TvDemo
     :component="TvModalDemo"
     :variants="demos"
-    nameComponent="TvModal"
-    npmInstall="@todovue/tv-modal"
-    sourceLink="https://github.com/TODOvue/tv-modal"
-    urlClone="https://github.com/TODOvue/tv-modal.git"
-    version="1.0.1"
+    component-name="TvModal"
+    npm-install="@todovue/tv-modal"
+    source-link="https://github.com/TODOvue/tv-modal"
+    url-clone="https://github.com/TODOvue/tv-modal.git"
+    version="1.1.0"
   />
 </template>
-
-<style scoped>
-
-</style>

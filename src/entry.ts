@@ -1,15 +1,21 @@
-import TvModal from './components/TvModal.vue'
+import type { App, Plugin } from 'vue'
+import _TvModal from './components/TvModal.vue'
 import './style.scss'
 
-(TvModal as any).install = (app: any) => {
+const TvModal = _TvModal as typeof _TvModal & Plugin;
+TvModal.install = (app: App) => {
   app.component('TvModal', TvModal)
 };
 
-export const TvModalPlugin = {
-  install(app: any) {
-    app.component('TvModal', TvModal)
+export { TvModal }
+
+export const TvModalPlugin: Plugin = {
+  install: TvModal.install
+};
+export default TvModal;
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    TvModal: typeof TvModal;
   }
 }
-
-export { TvModal }
-export default TvModal

@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue Modal (TvModal)
@@ -76,6 +76,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import '@todovue/tv-modal/style.css'
+import '@todovue/tv-button/style.css'
 import { TvModal } from '@todovue/tv-modal'
 
 const app = createApp(App)
@@ -87,7 +88,9 @@ app.mount('#app')
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  css: ['@todovue/tv-modal/style.css'],
+  modules: [
+    '@todovue/tv-modal/nuxt'
+  ]
 })
 ```
 
