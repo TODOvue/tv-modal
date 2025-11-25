@@ -65,6 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Customizable confirm and cancel buttons with conditional rendering
 - Flexible modal configuration with validation
 
+[1.1.1]: https://github.com/TODOvue/tv-modal/pull/4/files
 [1.1.0]: https://github.com/TODOvue/tv-modal/pull/3/files
 [1.0.1]: https://github.com/TODOvue/tv-modal/pull/2/files
 [1.0.0]: https://github.com/TODOvue/tv-modal/pull/1/files
