@@ -1,5 +1,4 @@
 @use "variables";
-@use "mixins";
 @use "global";
 @use "sass:color";
 
@@ -153,7 +152,6 @@
       margin: 0.5rem 0;
       color: #1f2937;
       line-height: 1.3;
-      font-family: variables.$font-title;
       text-align: center;
       width: 100%;
     }
@@ -171,7 +169,6 @@
       line-height: 1.6;
       margin-bottom: 1.5rem;
       color: #6b7280;
-      font-family: variables.$font-text;
       text-align: center;
       width: 100%;
     }
