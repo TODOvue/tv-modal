@@ -5,7 +5,6 @@
 A flexible, customizable Vue 3 modal component with multiple variants (success, error, warning, info), animations, theme support, and accessibility features. Works seamlessly in Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-modal.svg)](https://www.npmjs.com/package/@todovue/tv-modal)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5c6b372a-cb46-411f-918f-7835f77c750f/deploy-status)](https://app.netlify.com/projects/tv-modal/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-modal.svg)](https://www.npmjs.com/package/@todovue/tv-modal)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-modal.svg)](https://www.npmjs.com/package/@todovue/tv-modal)
 ![License](https://img.shields.io/github/license/TODOvue/tv-modal)
@@ -15,7 +14,7 @@ A flexible, customizable Vue 3 modal component with multiple variants (success, 
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-modal)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-modal?style=social)
 
-> Demo: https://tv-modal.netlify.app/
+> Demo: https://ui.todovue.blog/modal
 
 ---
 ## Table of Contents
