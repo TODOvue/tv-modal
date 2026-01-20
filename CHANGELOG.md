@@ -5,6 +5,22 @@ All notable changes to `@todovue/tv-modal` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-01-20
+
+### Added
+- Enhanced the Modal component with dedicated slot support for headers and footers, allowing for greater customization of layout and content.
+- Enhanced button variant support to include specific styles for confirm and cancel actions, improving visual clarity for user decision-making.
+- Introduced the `closeOnBackdrop` property to provide control over whether the modal closes when the backdrop is clicked.
+
+### Changed
+- Replaced background images in modal alerts with SVG icons to improve scaling, performance, and color customization.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
+- Updated the `@todovue/tv-button` dependency to `^1.2.4`.
+- Updated the `sass` dependency to `^1.97.2`.
+- Updated the `vite` dependency to `^7.3.1`.
+
 ## [1.1.2] - 2025-12-24
 
 ### Added
@@ -81,6 +97,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Customizable confirm and cancel buttons with conditional rendering
 - Flexible modal configuration with validation
 
+[1.2.0]: https://github.com/TODOvue/tv-modal/pull/6/files
 [1.1.2]: https://github.com/TODOvue/tv-modal/pull/5/files
 [1.1.1]: https://github.com/TODOvue/tv-modal/pull/4/files
 [1.1.0]: https://github.com/TODOvue/tv-modal/pull/3/files
