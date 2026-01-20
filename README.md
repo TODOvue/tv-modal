@@ -208,10 +208,11 @@ import { TvModal } from '@todovue/tv-modal'
 | Direct default import `import TvModal from '@todovue/tv-modal'` | Single usage or manual registration            |
 
 ## Props
-| Prop        | Type   | Default | Description                                                                   |
-|-------------|--------|---------|-------------------------------------------------------------------------------|
-| configModal | Object | —       | **Required.** Configuration object for modal content and buttons (see below). |
-| theme       | String | ''      | Theme override: `''` (auto-detect), `'dark-mode'`, or `'light-mode'`.         |
+| Prop            | Type    | Default | Description                                                                   |
+|-----------------|---------|---------|-------------------------------------------------------------------------------|
+| configModal     | Object  | —       | **Required.** Configuration object for modal content and buttons (see below). |
+| theme           | String  | ''      | Theme override: `''` (auto-detect), `'dark-mode'`, or `'light-mode'`.         |
+| closeOnBackdrop | Boolean | `false` | If `true`, clicking the backdrop closes the modal. Default is `false`.        |
 
 ## Events
 | Event name | Payload | Description                                      |

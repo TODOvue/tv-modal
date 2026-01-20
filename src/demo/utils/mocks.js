@@ -4,6 +4,7 @@ import Error from './demos/error.vue?raw';
 import Info from './demos/info.vue?raw';
 import Slots from './demos/slots.vue?raw';
 import CustomButtons from './demos/custom-buttons.vue?raw';
+import NotPersistent from './demos/not-persistent.vue?raw';
 
 export const demos = [
   {
@@ -98,5 +99,21 @@ export const demos = [
       }
     },
     html: CustomButtons,
+  },
+  {
+    id: 7,
+    title: "TvModal Close on Backdrop",
+    description: "Modal that closes when clicking the backdrop (close-on-backdrop=true).",
+    propsData: {
+      buttonText: "Open Close on Backdrop",
+      closeOnBackdrop: true,
+      configModal: {
+        title: "Click Outside",
+        description: "Clicking the backdrop will close this modal.",
+        confirmButtonText: "Okay",
+        icon: "info",
+      }
+    },
+    html: NotPersistent,
   },
 ];

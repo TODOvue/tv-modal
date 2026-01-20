@@ -2,7 +2,7 @@
 import { TvButton } from '@todovue/tv-button';
 import useModal from '../composables/useModal.js'
 
-defineProps({
+const props = defineProps({
   configModal: {
     type: Object,
     required: true,
@@ -16,6 +16,10 @@ defineProps({
     validator: (value) => {
       return ['', 'dark-mode', 'light-mode'].includes(value);
     }
+  },
+  closeOnBackdrop: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -32,6 +36,14 @@ const {
   currentTheme,
 } = useModal(emit);
 
+const handleBackdropClick = () => {
+  if (props.closeOnBackdrop) {
+    cancelModal();
+  } else {
+    animateModal();
+  }
+}
+
 defineExpose({
   openModal
 });
@@ -43,7 +55,7 @@ defineExpose({
       v-if="showModal"
       class="tv-modal-container"
       :class="theme || currentTheme"
-      @click.self="animateModal"
+      @click.self="handleBackdropClick"
       @keydown.esc="handleEscapeKey"
       role="dialog"
       aria-modal="true"

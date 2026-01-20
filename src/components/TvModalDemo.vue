@@ -11,6 +11,10 @@ defineProps({
   configModal: {
     type: Object,
     required: true
+  },
+  closeOnBackdrop: {
+    type: Boolean,
+    default: false
   }
 });
 
@@ -78,6 +82,7 @@ const customStyle = ref({
     <tv-modal
       :config-modal="configModal"
       :theme="currentTheme"
+      :close-on-backdrop="closeOnBackdrop"
       @accepted="handleAccept"
       @canceled="handleCancel"
       ref="modal"
