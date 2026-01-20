@@ -14,6 +14,6 @@ const TvModalDemo = defineAsyncComponent(/* webpackChunkName: "TvModalDemo" */()
     npm-install="@todovue/tv-modal"
     source-link="https://github.com/TODOvue/tv-modal"
     url-clone="https://github.com/TODOvue/tv-modal.git"
-    version="1.1.2"
+    version="1.2.0"
   />
 </template>
