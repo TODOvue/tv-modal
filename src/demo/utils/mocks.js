@@ -3,6 +3,7 @@ import Success from './demos/success.vue?raw';
 import Error from './demos/error.vue?raw';
 import Info from './demos/info.vue?raw';
 import Slots from './demos/slots.vue?raw';
+import CustomButtons from './demos/custom-buttons.vue?raw';
 
 export const demos = [
   {
@@ -79,5 +80,23 @@ export const demos = [
       }
     },
     html: Slots,
+  },
+  {
+    id: 6,
+    title: "TvModal Custom Buttons",
+    description: "Modal with customized button variants (Danger/Secondary).",
+    propsData: {
+      buttonText: "Open Custom Buttons",
+      configModal: {
+        title: "Delete Account",
+        description: "Are you sure you want to delete your account? This action cannot be undone.",
+        confirmButtonText: "Yes, Delete",
+        cancelButtonText: "Cancel",
+        icon: "warning",
+        confirmButtonVariant: "danger",
+        cancelButtonVariant: "success",
+      }
+    },
+    html: CustomButtons,
   },
 ];

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Enhanced the Modal component with dedicated slot support for headers and footers, allowing for greater customization of layout and content.
+- Enhanced button variant support to include specific styles for confirm and cancel actions, improving visual clarity for user decision-making.
 
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.

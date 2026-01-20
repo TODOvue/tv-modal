@@ -83,7 +83,7 @@ defineExpose({
         <slot name="footer">
           <div class="tv-modal-actions">
             <tv-button
-              variant="success"
+              :variant="configModal.confirmButtonVariant || 'success'"
               rounded
               @click="acceptModal"
               v-if="configModal.confirmButtonText"
@@ -91,6 +91,7 @@ defineExpose({
               {{ configModal.confirmButtonText }}
             </tv-button>
             <tv-button
+              :variant="configModal.cancelButtonVariant"
               rounded
               @click="cancelModal"
               v-if="configModal.cancelButtonText"

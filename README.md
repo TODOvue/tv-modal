@@ -232,13 +232,15 @@ Usage:
 ## Configuration Object
 The `configModal` prop accepts an object with the following properties:
 
-| Property          | Type   | Required | Description                                                     |
-|-------------------|--------|----------|-----------------------------------------------------------------|
-| title             | String | No*      | Modal title text.                                               |
-| description       | String | No*      | Modal description/body text.                                    |
-| confirmButtonText | String | No       | Text for the confirm button. If omitted, button won't show.     |
-| cancelButtonText  | String | No       | Text for the cancel button. If omitted, button won't show.      |
-| icon              | String | No       | Icon variant: `'success'`, `'error'`, `'warning'`, or `'info'`. |
+| Property             | Type   | Required | Description                                                            |
+|----------------------|--------|----------|------------------------------------------------------------------------|
+| title                | String | No*      | Modal title text.                                                      |
+| description          | String | No*      | Modal description/body text.                                           |
+| confirmButtonText    | String | No       | Text for the confirm button. If omitted, button won't show.            |
+| confirmButtonVariant | String | No       | Variant for confirm button (e.g. `success`, `danger`). Def: `success`. |
+| cancelButtonText     | String | No       | Text for the cancel button. If omitted, button won't show.             |
+| cancelButtonVariant  | String | No       | Variant for cancel button. (e.g. `success`, `danger`). Def: `success`. |
+| icon                 | String | No       | Icon variant: `'success'`, `'error'`, `'warning'`, or `'info'`.        |
 
 \* At least one of `title` or `description` is required (validated by prop validator).
 
