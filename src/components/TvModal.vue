@@ -52,47 +52,53 @@ defineExpose({
       tabindex="-1"
     >
       <div class="tv-modal" ref="tvModal">
-        <div
-          class="tv-modal-image tv-m-auto"
-          :class="`tv-modal-${configModal.icon}`"
-          v-if="configModal.icon"
-          :aria-label="`${configModal.icon} icon`"
-        ></div>
-        <div
-          id="tv-modal-title"
-          class="tv-modal-title"
-          v-if="configModal.title"
-        >
-          {{ configModal.title }}
-        </div>
+        <slot name="header">
+          <div
+            class="tv-modal-image tv-m-auto"
+            :class="`tv-modal-${configModal.icon}`"
+            v-if="configModal.icon"
+            :aria-label="`${configModal.icon} icon`"
+          ></div>
+          <div
+            id="tv-modal-title"
+            class="tv-modal-title"
+            v-if="configModal.title"
+          >
+            {{ configModal.title }}
+          </div>
+        </slot>
         <hr
           class="tv-modal-separator"
-          v-if="configModal.title && configModal.description"
+          v-if="($slots.header || configModal.title) && ($slots.default || configModal.description)"
         />
-        <div
-          id="tv-modal-description"
-          class="tv-modal-description"
-          v-if="configModal.description"
-        >
-          {{ configModal.description }}
-        </div>
-        <div class="tv-modal-actions">
-          <tv-button
-            variant="success"
-            rounded
-            @click="acceptModal"
-            v-if="configModal.confirmButtonText"
+        <slot>
+          <div
+            id="tv-modal-description"
+            class="tv-modal-description"
+            v-if="configModal.description"
           >
-            {{ configModal.confirmButtonText }}
-          </tv-button>
-          <tv-button
-            rounded
-            @click="cancelModal"
-            v-if="configModal.cancelButtonText"
-          >
-            {{ configModal.cancelButtonText }}
-          </tv-button>
-        </div>
+            {{ configModal.description }}
+          </div>
+        </slot>
+        <slot name="footer">
+          <div class="tv-modal-actions">
+            <tv-button
+              variant="success"
+              rounded
+              @click="acceptModal"
+              v-if="configModal.confirmButtonText"
+            >
+              {{ configModal.confirmButtonText }}
+            </tv-button>
+            <tv-button
+              rounded
+              @click="cancelModal"
+              v-if="configModal.cancelButtonText"
+            >
+              {{ configModal.cancelButtonText }}
+            </tv-button>
+          </div>
+        </slot>
       </div>
     </div>
   </Teleport>

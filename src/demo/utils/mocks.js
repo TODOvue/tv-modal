@@ -2,6 +2,7 @@ import Default from './demos/default.vue?raw';
 import Success from './demos/success.vue?raw';
 import Error from './demos/error.vue?raw';
 import Info from './demos/info.vue?raw';
+import Slots from './demos/slots.vue?raw';
 
 export const demos = [
   {
@@ -65,5 +66,18 @@ export const demos = [
       }
     },
     html: Info,
+  },
+  {
+    id: 5,
+    title: "TvModal Slots",
+    description: "Modal using slots for custom header, body, and footer content.",
+    propsData: {
+      buttonText: "Open Slots Modal",
+      configModal: {
+        title: "Slots Demo",
+        confirmButtonText: "Close",
+      }
+    },
+    html: Slots,
   },
 ];
