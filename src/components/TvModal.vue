@@ -78,7 +78,7 @@ defineExpose({
         </div>
         <div class="tv-modal-actions">
           <tv-button
-            isSuccess
+            variant="success"
             rounded
             @click="acceptModal"
             v-if="configModal.confirmButtonText"
